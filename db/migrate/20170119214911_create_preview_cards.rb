@@ -1,4 +1,4 @@
-class CreatePreviewCards < ActiveRecord::Migration[5.0]
+class CreatePreviewCards < ActiveRecord::Migration[4.2][5.0]
   def change
     create_table :preview_cards do |t|
       t.integer :status_id

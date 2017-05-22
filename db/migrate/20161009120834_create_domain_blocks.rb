@@ -1,4 +1,4 @@
-class CreateDomainBlocks < ActiveRecord::Migration[5.0]
+class CreateDomainBlocks < ActiveRecord::Migration[4.2][5.0]
   def change
     create_table :domain_blocks do |t|
       t.string :domain, null: false, default: ''

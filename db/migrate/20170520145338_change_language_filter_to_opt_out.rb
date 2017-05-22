@@ -1,4 +1,4 @@
-class ChangeLanguageFilterToOptOut < ActiveRecord::Migration[5.0]
+class ChangeLanguageFilterToOptOut < ActiveRecord::Migration[4.2][5.0]
   def change
     remove_index :users, :allowed_languages
     remove_column :users, :allowed_languages

@@ -1,4 +1,4 @@
-class ChangePrimaryKeyToBigintOnStatuses < ActiveRecord::Migration[5.0]
+class ChangePrimaryKeyToBigintOnStatuses < ActiveRecord::Migration[4.2][5.0]
   def change
     remove_foreign_key :statuses, :statuses
     change_column :statuses, :id, :bigint

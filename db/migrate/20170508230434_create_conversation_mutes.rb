@@ -1,4 +1,4 @@
-class CreateConversationMutes < ActiveRecord::Migration[5.0]
+class CreateConversationMutes < ActiveRecord::Migration[4.2][5.0]
   def change
     create_table :conversation_mutes do |t|
       t.integer :account_id, null: false

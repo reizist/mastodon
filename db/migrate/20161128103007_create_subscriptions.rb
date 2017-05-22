@@ -1,4 +1,4 @@
-class CreateSubscriptions < ActiveRecord::Migration[5.0]
+class CreateSubscriptions < ActiveRecord::Migration[4.2][5.0]
   def change
     create_table :subscriptions do |t|
       t.string :callback_url, null: false, default: ''

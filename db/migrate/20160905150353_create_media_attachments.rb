@@ -1,4 +1,4 @@
-class CreateMediaAttachments < ActiveRecord::Migration[5.0]
+class CreateMediaAttachments < ActiveRecord::Migration[4.2][5.0]
   def change
     create_table :media_attachments do |t|
       t.integer :status_id, null: true, default: nil

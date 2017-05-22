@@ -1,4 +1,4 @@
-class AddNotificationsAndFavouritesIndices < ActiveRecord::Migration[5.0]
+class AddNotificationsAndFavouritesIndices < ActiveRecord::Migration[4.2][5.0]
   def change
     add_index :notifications, [:activity_id, :activity_type]
     add_index :accounts, :url

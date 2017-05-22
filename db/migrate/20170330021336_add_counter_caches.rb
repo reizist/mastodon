@@ -1,4 +1,4 @@
-class AddCounterCaches < ActiveRecord::Migration[5.0]
+class AddCounterCaches < ActiveRecord::Migration[4.2][5.0]
   def change
     add_column :statuses, :favourites_count, :integer, null: false, default: 0
     add_column :statuses, :reblogs_count, :integer, null: false, default: 0

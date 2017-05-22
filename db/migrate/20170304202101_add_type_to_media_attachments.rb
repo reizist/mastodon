@@ -1,4 +1,4 @@
-class AddTypeToMediaAttachments < ActiveRecord::Migration[5.0]
+class AddTypeToMediaAttachments < ActiveRecord::Migration[4.2][5.0]
   def up
     add_column :media_attachments, :type, :integer, default: 0, null: false
 

@@ -1,4 +1,4 @@
-class CreateStatusesTagsJoinTable < ActiveRecord::Migration[5.0]
+class CreateStatusesTagsJoinTable < ActiveRecord::Migration[4.2][5.0]
   def change
     create_join_table :statuses, :tags do |t|
       t.index :tag_id

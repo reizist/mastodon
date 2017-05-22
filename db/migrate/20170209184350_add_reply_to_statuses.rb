@@ -1,4 +1,4 @@
-class AddReplyToStatuses < ActiveRecord::Migration[5.0]
+class AddReplyToStatuses < ActiveRecord::Migration[4.2][5.0]
   def up
     add_column :statuses, :reply, :boolean, nil: false, default: false
     Status.update_all('reply = (in_reply_to_id IS NOT NULL)')

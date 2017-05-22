@@ -1,4 +1,4 @@
-class AddOEmbedToPreviewCards < ActiveRecord::Migration[5.0]
+class AddOEmbedToPreviewCards < ActiveRecord::Migration[4.2][5.0]
   def change
     add_column :preview_cards, :type, :integer, default: 0, null: false
     add_column :preview_cards, :html, :text, null: false, default: ''

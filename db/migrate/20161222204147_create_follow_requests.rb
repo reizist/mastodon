@@ -1,4 +1,4 @@
-class CreateFollowRequests < ActiveRecord::Migration[5.0]
+class CreateFollowRequests < ActiveRecord::Migration[4.2][5.0]
   def change
     create_table :follow_requests do |t|
       t.integer :account_id, null: false

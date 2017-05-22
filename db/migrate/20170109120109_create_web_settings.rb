@@ -1,4 +1,4 @@
-class CreateWebSettings < ActiveRecord::Migration[5.0]
+class CreateWebSettings < ActiveRecord::Migration[4.2][5.0]
   def change
     create_table :web_settings do |t|
       t.integer :user_id

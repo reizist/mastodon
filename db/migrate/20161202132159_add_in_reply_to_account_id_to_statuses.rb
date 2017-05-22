@@ -1,4 +1,4 @@
-class AddInReplyToAccountIdToStatuses < ActiveRecord::Migration[5.0]
+class AddInReplyToAccountIdToStatuses < ActiveRecord::Migration[4.2][5.0]
   def up
     add_column :statuses, :in_reply_to_account_id, :integer, null: true, default: nil
 

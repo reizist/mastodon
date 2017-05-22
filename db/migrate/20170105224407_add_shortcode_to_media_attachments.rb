@@ -1,4 +1,4 @@
-class AddShortcodeToMediaAttachments < ActiveRecord::Migration[5.0]
+class AddShortcodeToMediaAttachments < ActiveRecord::Migration[4.2][5.0]
   def up
     add_column :media_attachments, :shortcode, :string, null: true, default: nil
     add_index :media_attachments, :shortcode, unique: true
