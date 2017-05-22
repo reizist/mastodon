@@ -117,6 +117,7 @@ GEM
       safe_yaml (~> 1.0.0)
     crass (1.0.2)
     debug_inspector (0.0.3)
+    default_value_for (2.0.3)
     devise (4.3.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -489,6 +490,7 @@ DEPENDENCIES
   capistrano-yarn (~> 2.0)
   capybara (~> 2.14)
   cld3 (~> 3.1)
+  default_value_for
   devise (~> 4.2)
   devise-two-factor (~> 3.0)
   doorkeeper (~> 4.2)

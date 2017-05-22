@@ -50,6 +50,9 @@ class Status < ApplicationRecord
   has_one :notification, as: :activity, dependent: :destroy
   has_one :preview_card, dependent: :destroy
 
+  default_value_for :text, value: '', allows_nil: false # MySQL can not have default to text
+  default_value_for :spoiler_text, value: '', allows_nil: false # MySQL can not have default to text
+
   validates :uri, uniqueness: true, unless: :local?
   validates :text, presence: true, unless: :reblog?
   validates_with StatusLengthValidator

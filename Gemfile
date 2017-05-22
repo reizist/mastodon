@@ -62,6 +62,8 @@ gem 'twitter-text', '~> 1.14'
 gem 'tzinfo-data', '~> 1.2017'
 gem 'webpacker', '~> 1.2'
 
+gem 'default_value_for'
+
 group :development, :test do
   gem 'fabrication', '~> 2.16'
   gem 'fuubar', '~> 2.2'
