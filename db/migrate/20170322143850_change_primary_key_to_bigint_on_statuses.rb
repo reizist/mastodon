@@ -1,7 +1,7 @@
 class ChangePrimaryKeyToBigintOnStatuses < ActiveRecord::Migration[4.2][5.0]
   def change
     remove_foreign_key :statuses, :statuses
-    change_column :statuses, :id, :bigint
+    change_column :statuses, :id, :bigint, null: false, unique: true, auto_increment: true
     change_column :statuses, :reblog_of_id, :bigint
     change_column :statuses, :in_reply_to_id, :bigint
 
