@@ -54,8 +54,10 @@ class User < ApplicationRecord
   scope :confirmed, -> { where.not(confirmed_at: nil) }
   scope :inactive, -> { where(arel_table[:current_sign_in_at].lt(ACTIVE_DURATION.ago)) }
 
-  before_validation :sanitize_languages
+  before_validation :allowed_languages
 
+  serialize :status_ids, Array
+  
   def confirmed?
     confirmed_at.present?
   end
