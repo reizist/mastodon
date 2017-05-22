@@ -1,12 +1,11 @@
 # frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: subscriptions
 #
 #  id                          :integer          not null, primary key
-#  callback_url                :string           default(""), not null
-#  secret                      :string
+#  callback_url                :string(255)      default(""), not null
+#  secret                      :string(255)
 #  expires_at                  :datetime
 #  confirmed                   :boolean          default(FALSE), not null
 #  account_id                  :integer          not null

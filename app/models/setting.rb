@@ -4,9 +4,9 @@
 # Table name: settings
 #
 #  id         :integer          not null, primary key
-#  var        :string           not null
-#  value      :text
-#  thing_type :string
+#  var        :string(255)      not null
+#  value      :text(65535)
+#  thing_type :string(255)
 #  thing_id   :integer
 #  created_at :datetime
 #  updated_at :datetime

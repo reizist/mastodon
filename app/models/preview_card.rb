@@ -5,21 +5,21 @@
 #
 #  id                 :integer          not null, primary key
 #  status_id          :integer
-#  url                :string           default(""), not null
-#  title              :string
-#  description        :string
-#  image_file_name    :string
-#  image_content_type :string
+#  url                :string(255)      default(""), not null
+#  title              :string(255)
+#  description        :string(255)
+#  image_file_name    :string(255)
+#  image_content_type :string(255)
 #  image_file_size    :integer
 #  image_updated_at   :datetime
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  type               :integer          default("link"), not null
-#  html               :text             default(""), not null
-#  author_name        :string           default(""), not null
-#  author_url         :string           default(""), not null
-#  provider_name      :string           default(""), not null
-#  provider_url       :string           default(""), not null
+#  html               :text(65535)      not null
+#  author_name        :string(255)      default(""), not null
+#  author_url         :string(255)      default(""), not null
+#  provider_name      :string(255)      default(""), not null
+#  provider_url       :string(255)      default(""), not null
 #  width              :integer          default(0), not null
 #  height             :integer          default(0), not null
 #

@@ -6,8 +6,8 @@
 #  id                         :integer          not null, primary key
 #  account_id                 :integer          not null
 #  target_account_id          :integer          not null
-#  status_ids                 :integer          default([]), not null, is an Array
-#  comment                    :text             default(""), not null
+#  status_ids                 :integer          default(0), not null
+#  comment                    :text(65535)
 #  action_taken               :boolean          default(FALSE), not null
 #  created_at                 :datetime         not null
 #  updated_at                 :datetime         not null

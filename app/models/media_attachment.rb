@@ -5,15 +5,15 @@
 #
 #  id                :integer          not null, primary key
 #  status_id         :integer
-#  file_file_name    :string
-#  file_content_type :string
+#  file_file_name    :string(255)
+#  file_content_type :string(255)
 #  file_file_size    :integer
 #  file_updated_at   :datetime
-#  remote_url        :string           default(""), not null
+#  remote_url        :string(255)      default(""), not null
 #  account_id        :integer
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
-#  shortcode         :string
+#  shortcode         :string(255)
 #  type              :integer          default("image"), not null
 #  file_meta         :json
 #

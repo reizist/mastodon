@@ -4,23 +4,23 @@
 # Table name: statuses
 #
 #  id                     :integer          not null, primary key
-#  uri                    :string
+#  uri                    :string(255)
 #  account_id             :integer          not null
-#  text                   :text             default(""), not null
+#  text                   :text(65535)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  in_reply_to_id         :integer
 #  reblog_of_id           :integer
-#  url                    :string
+#  url                    :string(255)
 #  sensitive              :boolean          default(FALSE)
 #  visibility             :integer          default("public"), not null
 #  in_reply_to_account_id :integer
 #  application_id         :integer
-#  spoiler_text           :text             default(""), not null
+#  spoiler_text           :text(65535)
 #  reply                  :boolean          default(FALSE)
 #  favourites_count       :integer          default(0), not null
 #  reblogs_count          :integer          default(0), not null
-#  language               :string           default("en"), not null
+#  language               :string(255)      default("en"), not null
 #  conversation_id        :integer
 #
 

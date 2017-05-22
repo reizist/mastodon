@@ -6,7 +6,7 @@
 #  id              :integer          not null, primary key
 #  account_id      :integer
 #  activity_id     :integer
-#  activity_type   :string
+#  activity_type   :string(255)
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  from_account_id :integer

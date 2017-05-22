@@ -4,7 +4,7 @@
 # Table name: domain_blocks
 #
 #  id           :integer          not null, primary key
-#  domain       :string           default(""), not null
+#  domain       :string(255)      default(""), not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  severity     :integer          default("silence")

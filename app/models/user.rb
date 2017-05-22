@@ -4,33 +4,33 @@
 # Table name: users
 #
 #  id                        :integer          not null, primary key
-#  email                     :string           default(""), not null
+#  email                     :string(255)      default(""), not null
 #  account_id                :integer          not null
 #  created_at                :datetime         not null
 #  updated_at                :datetime         not null
-#  encrypted_password        :string           default(""), not null
-#  reset_password_token      :string
+#  encrypted_password        :string(255)      default(""), not null
+#  reset_password_token      :string(255)
 #  reset_password_sent_at    :datetime
 #  remember_created_at       :datetime
 #  sign_in_count             :integer          default(0), not null
 #  current_sign_in_at        :datetime
 #  last_sign_in_at           :datetime
-#  current_sign_in_ip        :inet
-#  last_sign_in_ip           :inet
+#  current_sign_in_ip        :string(255)
+#  last_sign_in_ip           :string(255)
 #  admin                     :boolean          default(FALSE)
-#  confirmation_token        :string
+#  confirmation_token        :string(255)
 #  confirmed_at              :datetime
 #  confirmation_sent_at      :datetime
-#  unconfirmed_email         :string
-#  locale                    :string
-#  encrypted_otp_secret      :string
-#  encrypted_otp_secret_iv   :string
-#  encrypted_otp_secret_salt :string
+#  unconfirmed_email         :string(255)
+#  locale                    :string(255)
+#  encrypted_otp_secret      :string(255)
+#  encrypted_otp_secret_iv   :string(255)
+#  encrypted_otp_secret_salt :string(255)
 #  consumed_timestep         :integer
 #  otp_required_for_login    :boolean
 #  last_emailed_at           :datetime
-#  otp_backup_codes          :string           is an Array
-#  filtered_languages        :string           default([]), not null, is an Array
+#  otp_backup_codes          :string(255)
+#  filtered_languages        :string(255)      default("0"), not null
 #
 
 class User < ApplicationRecord
@@ -54,7 +54,7 @@ class User < ApplicationRecord
   scope :confirmed, -> { where.not(confirmed_at: nil) }
   scope :inactive, -> { where(arel_table[:current_sign_in_at].lt(ACTIVE_DURATION.ago)) }
 
-  before_validation :allowed_languages
+  before_validation :filtered_languages
 
   serialize :status_ids, Array
   
